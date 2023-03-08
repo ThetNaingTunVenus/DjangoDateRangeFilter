@@ -9,3 +9,5 @@ class Testtable1(models.Model):
     date = models.DateField()
     class Meta:
         db_table = 'test1'
+
+
