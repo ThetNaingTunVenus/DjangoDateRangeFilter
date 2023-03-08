@@ -4,8 +4,8 @@ from django.db import models
 
 
 class Testtable1(models.Model):
-    tableid = models.PositiveIntegerField(primary_key=True)
-    name = models.CharField(max_length=225)
+
+    name = models.CharField(primary_key=True,max_length=225)
     date = models.DateField()
     class Meta:
         db_table = 'test1'
