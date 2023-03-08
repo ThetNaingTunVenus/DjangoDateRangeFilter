@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>TR elements define table rows</h2>
+
+<form method="POST">{% csrf_token %}
+
+from: <input type="date" name="from"/>
+
+to:<input type="date" name="to"/>
+
+<input type="submit" value="Search">
+
+<hr>
+
+<table style="width:100%">
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+
+  </tr>
+
+    {% for result in data %}
+
+  <tr>
+    <td>{{result.name}}</td>
+    <td>{{result.date}}</td>
+
+  </tr>
+
+    {% endfor %}
+</table>
+</form>
+
+</body>
+</html>
+
